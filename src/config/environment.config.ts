@@ -11,10 +11,10 @@ const defaultRetry = { times: 3, delay: 5000 }
 
 const config = {
   env: process.env.NODE_ENV || 'development',
-  appName: process.env.APP_NAME ? process.env.APP_NAME : 'tech-challenge',
+  appName: process.env.APP_NAME ? process.env.APP_NAME : 'api-clientes',
   projectVersion: pack.version,
   host: process.env.HOST || 'localhost',
-  port: process.env.NODE_ENV == 'test' ? 3001 : process.env.PORT || 3000,
+  port: process.env.NODE_ENV == 'test' ? 3001 : process.env.PORT || 8000,
   service: {
     enabled: process.env.ENABLED_SERVICE === 'true'
   },
@@ -29,7 +29,7 @@ const config = {
     swagger: {
       options: {
         info: {
-          title: 'tech-challenge',
+          title: 'api-clientes',
           version: pack.version
         },
         securityDefinitions: {
