@@ -6,7 +6,7 @@ export const AppDataSourceTest = new DataSource({
     port: 3307,
     username: "root",
     password: "root",
-    database: "dbtest",
+    database: "testdb",
     logging: true,
     entities: ["src/core/domain/entities/*.ts"],
     migrations: ["src/infra/data/database/migrations/*.ts"],
