@@ -39,7 +39,7 @@ jobs:
           echo "Esperando pelo MySQL..."
           RETRY_COUNT=0
           MAX_RETRIES=30
-          until mysqladmin ping -h127.0.0.1 --port=3309 --silent; do
+          until mysqladmin ping -h127.0.0.1 --port=3307 --silent; do
             RETRY_COUNT=$((RETRY_COUNT + 1))
             if [ $RETRY_COUNT -ge $MAX_RETRIES ]; then
               echo "MySQL não ficou pronto a tempo."
