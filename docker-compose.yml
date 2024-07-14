@@ -23,9 +23,9 @@ services:
         image: mysql:latest
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: tech-challenge-fiap-test
-            MYSQL_USER: fiap-test
-            MYSQL_PASSWORD: password
+            MYSQL_DATABASE: testdb
+            MYSQL_USER: test
+            MYSQL_PASSWORD: root
         ports:
             - "3307:3306"
         networks:

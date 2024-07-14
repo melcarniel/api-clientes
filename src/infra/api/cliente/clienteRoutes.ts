@@ -26,7 +26,7 @@ export default class ClienteRoutes implements IRoute {
         },
         {
           method: 'GET',
-          path: '/api/cliente/{id}',
+          path: '/api/clientes/{id}',
           options: {
             handler: controller.buscarClientePorID,
             validate: validate.getById,
@@ -39,7 +39,7 @@ export default class ClienteRoutes implements IRoute {
         },
         {
           method: 'GET',
-          path: '/api/cliente-cpf/{cpf}',
+          path: '/api/clientes/cpf/{cpf}',
           options: {
             handler: controller.buscarClientePorCPF,
             validate: validate.getByCPF,
@@ -52,7 +52,7 @@ export default class ClienteRoutes implements IRoute {
         },
         {
             method: 'POST',
-            path: '/api/cliente',
+            path: '/api/clientes',
             options: {
               handler: controller.adicionarCliente,
               validate: validate.postCliente,
@@ -65,7 +65,7 @@ export default class ClienteRoutes implements IRoute {
         },
         {
             method: 'DELETE',
-            path: '/api/cliente/{id}',
+            path: '/api/clientes/{id}',
             options: {
               handler: controller.deletarCliente,
               validate: validate.getById,
@@ -78,7 +78,7 @@ export default class ClienteRoutes implements IRoute {
         },
         {
             method: 'PUT',
-            path: '/api/cliente',
+            path: '/api/clientes',
             options: {
               handler: controller.atualizarCliente,
               validate: validate.updateCliente,
