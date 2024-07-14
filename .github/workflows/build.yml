@@ -55,7 +55,7 @@ jobs:
       - name: Run tests and generate coverage
         env:
           DATABASE_HOST: 127.0.0.1
-          DATABASE_USER: root
+          DATABASE_USER: test
           DATABASE_PASSWORD: root
           DATABASE_NAME: testdb
         run: npm run test
