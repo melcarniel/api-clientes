@@ -4,7 +4,7 @@ import { route, TestRouteOptions } from '../../common';
   it('[POST] Adicionar um cliente - 200', async () => {
     const params: TestRouteOptions = {
       method: 'POST',
-      url: 'api/cliente',
+      url: 'api/clientes',
       basePath: '',
       payload: {
         nome: 'Melina Garcia',
@@ -20,7 +20,7 @@ import { route, TestRouteOptions } from '../../common';
   it('[POST] Adicionar um cliente com mesmo cpf - 400', async () => {
     const params: TestRouteOptions = {
       method: 'POST',
-      url: 'api/cliente',
+      url: 'api/clientes',
       basePath: '',
       payload: {
         nome: 'Melina Garcia',
@@ -58,7 +58,7 @@ import { route, TestRouteOptions } from '../../common';
 
     const paramsId: TestRouteOptions = {
       method: 'GET',
-      url: `api/cliente/${response.payload[0].id}`,
+      url: `api/clientes/${response.payload[0].id}`,
       basePath: '',
       query: {
         id:response.payload.id
@@ -72,7 +72,7 @@ import { route, TestRouteOptions } from '../../common';
   it('[GET] Buscar cliente por ID inexistente - 404', async () => {
     const paramsId: TestRouteOptions = {
       method: 'GET',
-      url: `api/cliente/c4e53126-5a73-4ed0-b428-76950ed35b8c`,
+      url: `api/clientes/c4e53126-5a73-4ed0-b428-76950ed35b8c`,
       basePath: '',
     };
     const { payload, statusCode } = await route(paramsId);
@@ -92,7 +92,7 @@ import { route, TestRouteOptions } from '../../common';
 
     const paramsId: TestRouteOptions = {
       method: 'GET',
-      url: `api/cliente-cpf/${response.payload[0].cpf}`,
+      url: `api/clientes/cpf/${response.payload[0].cpf}`,
       basePath: '',
     };
     const { payload, statusCode } = await route(paramsId);
@@ -104,7 +104,7 @@ import { route, TestRouteOptions } from '../../common';
   it('[GET] Buscar cliente por CPF inexistente - 404', async () => {
     const paramsId: TestRouteOptions = {
       method: 'GET',
-      url: `api/cliente-cpf/305.234.211-34`,
+      url: `api/clientes/cpf/305.234.211-34`,
       basePath: '',
     };
     const { payload, statusCode } = await route(paramsId);
@@ -115,7 +115,7 @@ import { route, TestRouteOptions } from '../../common';
   it('[PUT] Atualizar cliente - 200', async () => {
     const paramsId: TestRouteOptions = {
       method: 'PUT',
-      url: `api/cliente`,
+      url: `api/clientes`,
       basePath: '',
       payload: {
         nome: 'Melina Carniel',
@@ -142,7 +142,7 @@ import { route, TestRouteOptions } from '../../common';
 
     const paramsId: TestRouteOptions = {
       method: 'DELETE',
-      url: `api/cliente/${response.payload[0].id}`,
+      url: `api/clientes/${response.payload[0].id}`,
       basePath: ''
     };
     const { statusCode } = await route(paramsId);
